@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-breadboard-half", "id": "bb1", "top": -60.6, "left": -218, "attrs": {} },
+      { "type": "board-xiao-esp32-c3", "id": "esp", "top": -210.63, "left": 52.18, "attrs": {} },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -205,
+        "left": -76.8,
+        "attrs": { "color": "green", "xray": "1" }
+      }
+    ],
+    "connections": [
+      [ "esp:GND", "bb1:tn.25", "black", [ "h77.42", "v144" ] ],
+      [ "esp:3V3", "bb1:tp.25", "red", [ "h67.82", "v124.8", "h-220.8" ] ],
+      [ "bb1:tn.1", "bb1:bn.1", "black", [ "v-0.1", "h-46.4", "v172.8" ] ],
+      [ "bb1:tp.1", "bb1:bp.1", "red", [ "v0.3", "h-56", "v172.8" ] ],
+      [ "btn1:1.l", "bb1:tp.10", "red", [ "h0" ] ],
+      [ "btn1:2.r", "esp:D0", "purple", [ "h0.2", "v96.2" ] ]
+    ],
+    "dependencies": {}
+  }
